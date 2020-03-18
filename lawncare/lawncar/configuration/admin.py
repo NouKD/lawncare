@@ -9,7 +9,7 @@ from django.utils.safestring import mark_safe
 #admin.site.register(models.Temoignage)
 
 class SocialAccountAdmin(admin.ModelAdmin):
-    list_display =  ('nom','liens','icone','date_add', 'date_update', 'status',)
+    list_display =  ('nom','icone','date_add', 'date_update', 'status',)
     list_filter =  ('status',)
     search_fields = ('nom',)
     date_hierarchy = 'date_add'
@@ -55,7 +55,7 @@ class PresentationAdmin(admin.ModelAdmin):
     ordering = ['nom',]
     list_per_page = 10
     fieldsets = [
-        ("infocategory",{'fields':['nom','video','description','video','image']}),
+        ("infocategory",{'fields':['nom','description','video','image']}),
         ("standare",{'fields':['status',]})
         ]
 
